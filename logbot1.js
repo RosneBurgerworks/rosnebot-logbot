@@ -88,7 +88,7 @@ function composeMessageRaw(data) {
 	let message = data[3];
 	let ipcID = data[4];
 
-	return `[ID ${ipcID}] [${time}] [U:1:${steamID}] ${username}: ${message}`;
+	return `[Bot ${ipcID}] [${time}] [U:1:${steamID}] ${username}: ${message}`;
 }
 
 function test_and_set(msg) {
