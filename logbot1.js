@@ -77,7 +77,7 @@ function composeMessage(data) {
 	let message = data[3];
 	let ipcID = data[4];
 
-	return `\`[Bot ${ipcID}] [U:1:${steamID}]\` **${username}:** ${message}`;
+	return `\`[RonseHook ${ipcID}] [U:1:${steamID}]\` **${username}:** ${message}`;
 }
 
 function composeMessageRaw(data) {
@@ -86,7 +86,7 @@ function composeMessageRaw(data) {
 	let message = data[3];
 	let ipcID = data[4];
 
-	return `[Bot ${ipcID}] [U:1:${steamID}] ${username}: ${message}`;
+	return `[RonseHook ${ipcID}] [U:1:${steamID}] ${username}: ${message}`;
 }
 
 function test_and_set(msg) {
@@ -196,7 +196,7 @@ function locateLogs() {
 }
 
 client.on('ready', () => {
-	client.user.setActivity('Team fortress 2', { type: "Playimg" });
+	client.user.setActivity('Team fortress 2', { type: "Playing" });
 	client.guilds.cache.forEach((guild, str, map) => {
 		var has_channel = guild.channels.cache.filter(channel => channel.type === 'text').filter(channel => channel.name === 'tf2-chat-relay').array().length;
 		if (!has_channel)
