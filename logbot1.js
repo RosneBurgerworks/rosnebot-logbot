@@ -196,7 +196,7 @@ function locateLogs() {
 }
 
 client.on('ready', () => {
-	client.user.setActivity('Team fortress 2', { type: "Playimg" });
+	client.user.setActivity('ROSNEHOOK.CC', { type: "PLAYING" });
 	client.guilds.cache.forEach((guild, str, map) => {
 		var has_channel = guild.channels.cache.filter(channel => channel.type === 'text').filter(channel => channel.name === 'tf2-chat-relay').array().length;
 		if (!has_channel)
