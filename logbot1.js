@@ -198,10 +198,10 @@ function locateLogs() {
 client.on('ready', () => {
 	client.user.setActivity('ROSNEHOOK', { type: "PLAYING" });
 	client.guilds.cache.forEach((guild, str, map) => {
-		var has_channel = guild.channels.cache.filter(channel => channel.type === 'text').filter(channel => channel.name === 'tf2-chat-relay').array().length;
+		var has_channel = guild.channels.cache.filter(channel => channel.type === 'text').filter(channel => channel.name === 'rosnebot-salt').array().length;
 		if (!has_channel)
-			guild.channels.create("tf2-chat-relay", { reason: 'Need somewhere to send the salt'}).then((channel) => {
-				console.log("Created tf2-chat-relay channel!");
+			guild.channels.create("rosnebot-salt", { reason: 'Need somewhere to send the salt'}).then((channel) => {
+				console.log("Created salt channel!");
 				channel.send("This channel will relay the chat of all bots.\n\nUse $$mute (steamid32) in order to (un)mute a given player.\n\nThis command will work from any channel, as long as you have Guild Management permissions.\n\nI Also recommend setting up the permissions such that noone can talk in this channel.")
 			}
 			).catch(console.error);
